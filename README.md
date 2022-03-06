@@ -1,6 +1,6 @@
 ![](https://i.imgur.com/xG74tOh.png)
 
-# Back-end | Objetos e Funções
+# Back-end | Funções
 
 ## Exercícios
 
