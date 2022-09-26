@@ -6,11 +6,11 @@
 
 Nessa sequência de exercícios vamos simular a parte da lógica de um processo simples de checkout num e-commerce.
 
-**a)** Declare uma função de nome `imprimirResumoDoCarrinho` que tenha apenas um parâmetro chamado `carrinho`. Faça commit do resultado.
+**a)** Declare uma função de nome `imprimirResumoDoCarrinho` que tenha apenas um parâmetro chamado `carrinho`.
 
 **b)** Sabendo que o parâmetro `carrinho` será sempre um objeto com o seguinte formato:
 
-```javascript=
+```javascript
 const carrinho = {
     nomeDoCliente: "Guido Bernal",
     produtos: [
@@ -40,33 +40,26 @@ Total a pagar: R$ 190,00
 
 Para testar sua implementação, chame a função `imprimirResumoDoCarrinho` passando o objeto `carrinho` exemplificado acimam como argumento.
 
-Faça commit do resultado.
-
 **c)** Modifique a questão anterior para que a função `imprimirResumoDoCarrinho`seja um método do objeto carrinho (sendo assim, cabe mudar o nome do método para apenas `imprimirResumo`) ao invés de uma função isolada.
-
-Faça commit do resultado.
 
 **d)** Declare uma nova função isolada chamada `addProdutoAoCarrinho` que tenha dois argumentos: `carrinho` e `produto`.
 
-Faça commit do resultado.
-
 **e)** Implemente a função `addProdutoAoCarrinho` de modo que o produto passado com argumento seja adicionado ao array de produtos da compra.
 
-Lembre-se que, antes de simplesmente adicionar o item ao array, é necessário verificar se já existe um item igual no carrinho. Caso exista, basta incrementar a qtd do item adequadamente. Caso não exista, aí sim é necessário adicionar um novo item ao array. Use o id dos produtos para fazer esta comparação.
+Lembre-se que, antes de simplesmente adicionar o item ao array, é necessário verificar se já existe um item igual no carrinho. Caso exista, basta incrementar a propriedade qtd do item adequadamente. Caso não exista, aí sim é necessário adicionar um novo item ao array. Use o id dos produtos para fazer esta comparação.
 
 Para testar sua implementação faça as seguintes chamadas, nesta ordem:
 
-```javascript=
-
+```javascript
 const novaBermuda = {
-            id: 2,
-            nome: "Bermuda",
-            qtd: 3,
-            precoUnit: 5000
-        }
-addProdutoAoCarrinho(carrinho, novaBermuda);
-carrinho.imprimirResumoDoCarrinho();
+    id: 2,
+    nome: "Bermuda",
+    qtd: 3,
+    precoUnit: 5000
+}
 
+addProdutoAoCarrinho(carrinho, novaBermuda);
+carrinho.imprimirResumo();
 ```
 
 Isso deve imprimir o seguinte resultado:
@@ -79,17 +72,16 @@ Total a pagar: R$ 340,00
 
 Em seguida, faça as seguintes chamadas:
 
-```javascript=
-
+```javascript
 const novoTenis = {
-            id: 3,
-            nome: "Tenis",
-            qtd: 1,
-            precoUnit: 10000
-        }
+    id: 3,
+    nome: "Tenis",
+    qtd: 1,
+    precoUnit: 10000
+}
+
 addProdutoAoCarrinho(carrinho, novoTenis);
 carrinho.imprimirResumoDoCarrinho();
-
 ```
 
 Isso deve imprimir o seguinte resultado:
@@ -100,11 +92,7 @@ Total de itens: 9 itens
 Total a pagar: R$ 440,00
 ```
 
-Faça commit do resultado.
-
-**f)** Modifique a questão anterior para que a função `addProdutoAoCarrinho`seja um método do objeto carrinho (sendo assim, cabe mudar o nome do método para apenas `addProduto`). Faça os mesmos testes anteriores (adaptando a chamada, que não precisará mais do argumento carrinho) e o resultado obtido deve ser o mesmo.
-
-Faça commit do resultado.
+**f)** Modifique a questão anterior para que a função `addProdutoAoCarrinho` seja um método do objeto carrinho (sendo assim, cabe mudar o nome do método para apenas `addProduto`. Faça os mesmos testes anteriores (adaptando a chamada, que não precisará mais do argumento carrinho) e o resultado obtido deve ser o mesmo.
 
 **g)** Declare um novo método para o objeto carrinho chamado `imprimirDetalhes`
 
@@ -119,8 +107,6 @@ Item 2 - Camisa - 3 und - R$ 90,00
 Total de itens: 5 itens
 Total a pagar: R$ 190,00
 ```
-
-Faça commit do resultado.
 
 **h)** Repare que, nas questão anterior, você fez uma função em que parte da lógica é muito parecida com o do método `imprimirResumo`, pois ambas precisam calcular o total de itens e calcular o total a pagar. Se algum dia o formato dos objetos forem modificados, de modo que você precise modificar a lógica do cálculo desses totais, você terá que lembrar de modificar isso em ambas as funções.
 
