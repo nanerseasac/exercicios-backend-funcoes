@@ -46,7 +46,7 @@ Implemente a função `corrigirProva` de modo que, ao receber um objeto como est
 O aluno(a) João acertou 3 questões e obteve nota 6
 ```
 
-Para testar sua implementação, chame a função `corrigirProva` passando o objeto `prova` exemplificado acimam como argumento.
+Para testar sua implementação, chame a função `corrigirProva` passando o objeto `prova` exemplificado acima como argumento.
 
 Faça commit do resultado.
 
