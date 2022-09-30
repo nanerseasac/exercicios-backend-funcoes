@@ -38,7 +38,7 @@ Total de itens: 5 itens
 Total a pagar: R$ 190,00
 ```
 
-Para testar sua implementação, chame a função `imprimirResumoDoCarrinho` passando o objeto `carrinho` exemplificado acimam como argumento.
+Para testar sua implementação, chame a função `imprimirResumoDoCarrinho` passando o objeto `carrinho` exemplificado acima como argumento.
 
 **c)** Modifique a questão anterior para que a função `imprimirResumoDoCarrinho`seja um método do objeto carrinho (sendo assim, cabe mudar o nome do método para apenas `imprimirResumo`) ao invés de uma função isolada.
 
@@ -81,7 +81,7 @@ const novoTenis = {
 }
 
 addProdutoAoCarrinho(carrinho, novoTenis);
-carrinho.imprimirResumoDoCarrinho();
+carrinho.imprimirResumo();
 ```
 
 Isso deve imprimir o seguinte resultado:
@@ -108,11 +108,11 @@ Total de itens: 5 itens
 Total a pagar: R$ 190,00
 ```
 
-**h)** Repare que, nas questão anterior, você fez uma função em que parte da lógica é muito parecida com o do método `imprimirResumo`, pois ambas precisam calcular o total de itens e calcular o total a pagar. Se algum dia o formato dos objetos forem modificados, de modo que você precise modificar a lógica do cálculo desses totais, você terá que lembrar de modificar isso em ambas as funções.
+**h)** Repare que, na questão anterior, você fez uma função em que parte da lógica é muito parecida com o do método `imprimirResumo`, pois ambas precisam calcular o total de itens e calcular o total a pagar. Se algum dia o formato dos objetos forem modificados, de modo que você precise modificar a lógica do cálculo desses totais, você terá que lembrar de modificar isso em ambas as funções.
 
 Por isso, muitas das vezes em que você for implementar alguma lógica repetidamente, será melhor criar uma nova função para centralizar essa lógica.
 
-Para corrigiir isso, vamos fazer dois novos métodos `calcularTotalDeItens` e `calcularTotalAPagar`, que devem retornar um número inteiro (lembre-se que você pode acessar os dados do carrinho através da palavra reservada `this`).
+Para corrigir isso, vamos fazer dois novos métodos `calcularTotalDeItens` e `calcularTotalAPagar`, que devem retornar um número inteiro (lembre-se que você pode acessar os dados do carrinho através da palavra reservada `this`).
 
 Depois, altere os métodos `imprimirResumo` e `imprimirDetalhes` para que elas chamem essas duas novas funções.
 
